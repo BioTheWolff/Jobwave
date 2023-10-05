@@ -46,6 +46,7 @@ Seasonal workers can also add and edit different information for the employers t
 ### Employers
 
 Employers have access to the application through an API. An employer is described by:
+
 - a name
 - a description
 - a profile picture
@@ -66,12 +67,12 @@ There are 4 subscription levels:
 
 The application is not responsible for the management of the subscription. It only manages grants and permissions depending on the subscription tier, which it is aware of by undisclosed means.
 
-### Ratings and comments
+### Reviews and comments
 
-- should deprecate outliers
-- the global rating should make the most recent ratings weigh more
+Seasonal workers and employers can leave reviews on each-other after a completed job.
+The rating is out of 5, and an optional comment can be left with the review.
 
-TODO
+An employer-worker contract (from a job offer) is considered complete, and reviews can be written, if and only if the job offer is accepted and the end date of the job offer is in the past.
 
 ### Recommendation system
 
@@ -109,7 +110,6 @@ Thus:
 - An employer can delete a job offer, which will remove all applications
 - Seasonal workers can leave ratings and comments for employers which they have worked for on the app
 - Employers can only leave ratings and comments on profiles of workers which they have hired before on the app
-- An employer-worker contract is considered complete, and ratings can be written, if and only if the job offer is accepted
   by both parties, and said contract has ended (the end date is in the past)
 - Employers can accept only one candidate for a job offer
 - Chats are not linked to an application, and only one chat can exist between a given employer and a given seasonal worker
