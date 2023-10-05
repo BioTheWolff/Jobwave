@@ -45,7 +45,15 @@ Seasonal workers can also add and edit different information for the employers t
 
 ### Employers
 
-Employers have access to the application through an API. An employer is only known by its API key and little to no data is known about them.
+Employers have access to the application through an API. An employer is described by:
+- a name
+- a description
+- a profile picture
+- a phone number
+- an email address
+- a postal address
+- an API key
+- a subscription tier
 
 There are 4 subscription levels:
 

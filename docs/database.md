@@ -57,8 +57,14 @@ erDiagram
     
     EMPLOYER {
         uuid id PK
+        string api_key
         string name
         string description
+        string profile_picture
+        string address
+        enum subscription
+        string email
+        string phone
     }
     
     JOB_OFFERS {
