@@ -1,5 +1,10 @@
 # Database logic schema
 
+This page consists of a database logic schema. It is a first draft of a relational database for Jobwave.
+
+As Jobwave will consists of multiple microservices, this schema may change. For example, `SEASONAL` may become a document-type database, grouping all the information about a seasonal worker (availabilities, experiences and referrals).
+
+
 ```mermaid
 erDiagram
     SEASONAL {
