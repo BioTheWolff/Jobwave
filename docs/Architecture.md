@@ -72,7 +72,7 @@ The application is not responsible for the management of the subscription. It on
 Seasonal workers and employers can leave reviews on each-other after a completed job.
 The rating is out of 5, and an optional comment can be left with the review.
 
-An employer-worker contract (from a job offer) is considered complete, and reviews can be written, if and only if the job offer is accepted and the end date of the job offer is in the past.
+An employer-worker contract (from a job offer) is considered complete, and reviews can be written, if and only if the job offer is accepted and the end date of the job offer is out of date.
 
 ### Recommendation system
 
