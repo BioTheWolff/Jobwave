@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2023-10-06T14:47:18.365Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="n8zmErL8dynycJ-XrgMb" version="22.0.3" type="device">
+  <diagram name="Page-1" id="6c_ohbftm7qWtLkXLV9D">
+    <mxGraphModel dx="1562" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-1" target="f8bVFRr4BjQ2tfwV-ElS-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-1" target="f8bVFRr4BjQ2tfwV-ElS-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="140" />
+              <mxPoint x="540" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-1" target="f8bVFRr4BjQ2tfwV-ElS-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="140" />
+              <mxPoint x="540" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-1" target="f8bVFRr4BjQ2tfwV-ElS-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-1" value="&lt;div&gt;Saisonnier&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="110" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-2" target="f8bVFRr4BjQ2tfwV-ElS-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-2" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="630" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-3" target="f8bVFRr4BjQ2tfwV-ElS-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-3" target="f8bVFRr4BjQ2tfwV-ElS-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="520" />
+              <mxPoint x="540" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-3" target="f8bVFRr4BjQ2tfwV-ElS-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="520" />
+              <mxPoint x="540" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-3" target="f8bVFRr4BjQ2tfwV-ElS-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-3" value="Employeur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="490" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-7" value="Gestion des offres d&#39;emploi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-9" value="Gestion des utilisateurs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-15" value="Postuler à des offres d&#39;emploi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-17" value="Communication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-20" value="Gestion de son compte" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-22" value="Gestion de ses informations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-26" target="f8bVFRr4BjQ2tfwV-ElS-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-26" value="Gestion des avis sur les saisonniers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="f8bVFRr4BjQ2tfwV-ElS-29" target="f8bVFRr4BjQ2tfwV-ElS-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8bVFRr4BjQ2tfwV-ElS-29" value="Gestion des avis sur les employeurs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
