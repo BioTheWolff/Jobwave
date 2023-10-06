@@ -76,12 +76,13 @@ An employer-worker contract (from a job offer) is considered complete, and revie
 
 ### Recommendation system
 
-for seasonal workers:
+Seasonal workers get job offers recommended to them using a recommendation system. They can choose several job categories to influence the system.
 
-- identify key experiences of the worker
-- ask for which categories are preferred for the moment
-
-TODO
+The recommendations should be based on:
+- recency of the job offer
+- relevant job categories found in the offer
+- company rating
+- company subscription level
 
 ### Job offers and applications
 
