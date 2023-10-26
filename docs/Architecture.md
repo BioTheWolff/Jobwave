@@ -2,7 +2,135 @@
 
 ## Project description
 
-description
+TODO
+
+### Users and data
+
+This section aims to document main "entities" that exist within the project, and the data they possess, induce and produce. Entities are abstract concepts that generally represent user accounts managed by either a natural or a legal person.
+
+#### Seasonal workers
+
+Seasonal workers are the main users of the application. They can create an account and log into the mobile app,
+which is their sole entrypoint for the application.
+
+<details>
+  <summary>"Primary" information</summary>
+  <ul>
+    <li>a full name (first and last names)</li>
+    <li>a gender</li>
+    <li>a birthdate</li>
+    <li>a nationality</li>
+    <li>a mobile phone number</li>
+    <li>an email address</li>
+    <li>a postal address</li>
+    <li>a profile picture</li>
+    <li>a CV (Curriculum Vitae)</li>
+    <li>a small biography</li>
+    <li>multiple job categories</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Employers-oriented information</summary>
+  <ul>
+    <li>
+      referrals: references of people who the seasonal workers have worked for (generally, a manager)
+      <ul>
+        <li>their full name</li>
+        <li>their company</li>
+        <li>the company’s postal address</li>
+        <li>the person’s work email</li>
+        <li>the person’s work phone number</li>
+      </ul>
+    </li>
+    <li>
+      past work experiences
+      <ul>
+        <li>job title</li>
+        <li>job category</li>
+        <li>company name</li>
+        <li>company’s postal address</li>
+        <li>start and end dates (down to the day)</li>
+      </ul>
+    </li>
+    <li>
+      availabilities: when and where the worker will be available for work
+      <ul>
+        <li>job category</li>
+        <li>job title if possible</li>
+        <li>start and end dates (down to the day)</li>
+        <li>their geographical zone</li>
+      </ul>
+    </li>
+  </ul>
+</details>
+
+#### Employers
+
+An employer is a user whose purpose is to create job offers, receive applications from seasonal workers, and recruit them.
+
+<details>
+  <summary>Employer information</summary>
+  <ul>
+    <li>a name</li>
+    <li>a description</li>
+    <li>a profile picture</li>
+    <li>a phone number</li>
+    <li>an email address</li>
+    <li>a postal address</li>
+    <li>an API key</li>
+    <li>a subscription tier</li>
+  </ul>
+</details>
+
+As described in the list above, employers are separated into "subscription tiers". They represent the tier that the employer paid for, and higher tiers allow for more perks, which are listed below.
+
+<details>
+  <summary>Subscription tiers and perks</summary>
+  <ul>
+    <li>Free: limited amount of profiles with only the full name and the profile picture</li>
+    <li>Silver: everything in the Free tier, plus the phone number and email address</li>
+    <li>Gold: unlimited amount of profiles, with the same information as the Silver tier</li>
+    <li>
+      Platinum: everything in the Gold tier, with some other perks:
+      <ul>
+        <li>access to a chat room with the seasonal workers</li>
+        <li>server-push notifications to profiles for all new job offers posted by the employer</li>
+      </ul>
+    </li>
+  </ul>
+</details>
+
+_**Note**: The application is not responsible for the management of the subscription. It is made aware of the API key and subscription tier by undisclosed means, and the provided data is considered as fully trusted._
+
+#### Job offers and applications
+
+As stated before, employers can create and manage job offers.
+
+<details>
+  <summary>Composition of a job offer</summary>
+  <ul>
+    <li>job title</li>
+    <li>job category</li>
+    <li>start and end dates</li>
+    <li>company</li>
+    <li>salary</li>
+    <li>benefits (if any, like company car, etc.)</li>
+  </ul>
+</details>
+
+Seasonal workers can apply for existing job offers, and employers can review their profiles before choosing an applicant.
+Employers can refuse as many profiles as they like, but can only accept one profile for a job offer.
+
+_Note: Accepting a profile automatically refuses the other applicants and closes the job offer._
+
+#### User reviews
+
+Seasonal workers and employers can both leave reviews on eachother after a completed job.
+The rating is out of 5, and an optional comment can be left with the review.
+
+An employer-worker contract (from a job offer) is considered complete, and reviews can be written,
+if and only if the job offer is accepted and the end date of the job offer is in the past at the time of the review.
 
 ## Architecture
 
@@ -30,73 +158,15 @@ _NB: Communication between functional microservices should only be through backb
 
 #### Seasonal workers
 
-Seasonal workers are the main users of the application. They can create an account and log into the mobile app, which is
-their sole entrypoint for the application.
-
-Their account is composed of “primary” information:
-
-- a full name (first and last names)
-- a gender
-- a birthdate
-- a nationality
-- a mobile phone number
-- an email address
-- a postal address
-- a profile picture
-- a CV (Curriculum Vitae)
-- a small biography
-- multiple job categories
-
-Seasonal workers can also add and edit different information for the employers to see:
-
-- referrals: references of people who the seasonal workers have worked for (generally, a manager)
-  - their full name
-  - their company
-  - the company’s postal address
-  - the person’s work email
-  - the person’s work phone number
-- past work experiences
-  - job title
-  - job category
-  - company name
-  - company’s postal address
-  - start and end dates (down to the day)
-- availabilities: when and where the worker will be available for work
-  - job category
-  - job title if possible
-  - start and end dates (down to the day)
-  - their geographical zone
+TODO
 
 #### Employers
 
-Employers have access to the application through an API. An employer is described by:
-
-- a name
-- a description
-- a profile picture
-- a phone number
-- an email address
-- a postal address
-- an API key
-- a subscription tier
-
-There are 4 subscription levels:
-
-- Free: limited amount of profiles with only the full name and the profile picture
-- Silver: same as Free, with also phone number and email
-- Gold: unlimited amount of profiles, with the same information as the Silver tier
-- Platinum: everything in the Gold tier, with some other perks:
-  - access to a chat room with the seasonal workers
-  - server-push notifications to profiles for all new job offers posted by the employer
-
-The application is not responsible for the management of the subscription. It only manages grants and permissions depending on the subscription tier, which it is aware of by undisclosed means.
+TODO
 
 #### Reviews and comments
 
-Seasonal workers and employers can leave reviews on each-other after a completed job.
-The rating is out of 5, and an optional comment can be left with the review.
-
-An employer-worker contract (from a job offer) is considered complete, and reviews can be written, if and only if the job offer is accepted and the end date of the job offer is out of date.
+TODO
 
 #### Recommendation system
 
@@ -110,16 +180,7 @@ The recommendations should be based on:
 
 #### Job offers and applications
 
-Employers can post job offers. A job offer is composed of:
-
-- job title
-- job category
-- start and end dates
-- company
-- salary
-- benefits (if any, like company car, etc.)
-
-Seasonal workers can apply for job offers, and employers can review their profiles before choosing a candidate. Employers can refuse as many profiles as they like, but can only accept one profile for a job offer. Accepting a profile automatically refuses the other applicants and closes the job offer.
+TODO
 
 ## Choices and decisions
 
