@@ -1,10 +1,34 @@
-# JobWave - Architecture
+# JobWave
 
 ## Project description
 
 description
 
-### Seasonal workers
+## Architecture
+
+Due to the project's size and specialization, it has been cut down into several microservices (MS). Each microservice follows the SRP (Single Responsibility Principle).
+The main features are:
+- decoupling: services are only responsible for their own task and can easily be swapped out since they interact through a third party
+- overload risk reduction: services can be scaled on-demand because of their independence
+
+### Critical and support services
+
+The "critical" services can be seen as "top-level" or "backbone" services. They are the services (nearly) all other microservices rely on to properly function. On the other hand, "support" services are useful to several microservices for a certain purpose, and are decoupled from them in order to reduce software redundancy and increase data pooling.
+
+The only support service in this project is an object storage (MinIO). It allows for image and file storage and management, for both the seasonal workers and the employers.
+
+#### Critical services
+
+TODO
+
+### Functional microservices
+
+This section describes each "functional" microservice. A functional microservice manages one or several functionalities for the project.
+Functional microservices can depend on data managed by other functional microservices, although they should never contact eachother directly.
+
+_NB: Communication between functional microservices should only be through backbone services, and if possible, in an asynchronous way._
+
+#### Seasonal workers
 
 Seasonal workers are the main users of the application. They can create an account and log into the mobile app, which is
 their sole entrypoint for the application.
@@ -43,7 +67,7 @@ Seasonal workers can also add and edit different information for the employers t
   - start and end dates (down to the day)
   - their geographical zone
 
-### Employers
+#### Employers
 
 Employers have access to the application through an API. An employer is described by:
 
@@ -67,14 +91,14 @@ There are 4 subscription levels:
 
 The application is not responsible for the management of the subscription. It only manages grants and permissions depending on the subscription tier, which it is aware of by undisclosed means.
 
-### Reviews and comments
+#### Reviews and comments
 
 Seasonal workers and employers can leave reviews on each-other after a completed job.
 The rating is out of 5, and an optional comment can be left with the review.
 
 An employer-worker contract (from a job offer) is considered complete, and reviews can be written, if and only if the job offer is accepted and the end date of the job offer is out of date.
 
-### Recommendation system
+#### Recommendation system
 
 Seasonal workers get job offers recommended to them using a recommendation system. They can choose several job categories to influence the system.
 
@@ -84,7 +108,7 @@ The recommendations should be based on:
 - company rating
 - company subscription level
 
-### Job offers and applications
+#### Job offers and applications
 
 Employers can post job offers. A job offer is composed of:
 
