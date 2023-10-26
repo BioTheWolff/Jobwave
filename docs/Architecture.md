@@ -147,14 +147,23 @@ The only support service in this project is an object storage (MinIO). It allows
 
 #### Critical services
 
-TODO
+The first critical service is the API gateway (also called "gateway"). Being the only entrypoint into the application, its task is to handle incoming requests and connections and redirect to the correct functional microservice.
+It also ensures authentication and authorization throughout the whole application, and serves as a guard.
+The API gateway is created with Spring Security, which is a reliable and resilient framework that fits our needs.
+
+_Note: The gateway is not responsible for user storage and management, as this functionality is responsibility of a functional microservice. The gateway only serves as a proxy and a token generator in the authentication process._
+
+The second critical service is the message broker. The broker serves as a communication bridge between microservices, which allows for asynchronous and secure communication.
+
+The message broker used in this project is Apache Kafka. Its multi-tenancy management improves the overall security by ensuring each functional microservice has its own credentials.
+Moreover, microservices can leverage the consumer group principle to consume topics and use given messages for different purposes.
 
 ### Functional microservices
 
 This section describes each "functional" microservice. A functional microservice manages one or several functionalities for the project.
 Functional microservices can depend on data managed by other functional microservices, although they should never contact eachother directly.
 
-_NB: Communication between functional microservices should only be through backbone services, and if possible, in an asynchronous way._
+_NB: Communication between functional microservices should only be through backbone services (such as the broker), and if possible, in an asynchronous way._
 
 #### Seasonal workers
 
