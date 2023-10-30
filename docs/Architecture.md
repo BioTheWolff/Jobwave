@@ -169,6 +169,13 @@ _NB: Communication between functional microservices should only be through backb
 
 The authentication microservice is responsible for all user's authentication and token generation and is written using Spring Security. The microservice is purposefully detached from the Users MS in order to ensure functionality for connected users if the Authentication MS were to shut down.
 
+The microservice is the root of trust of the application and stores all connection data required for users to authenticate.
+
+- for employers, this includes the Employer ID (EID) and the API key.
+- for seasonal workers, this includes the Seasonal Worker ID (WID), the canonical username and the password.
+
+_NB: The canonical username is the username used upon creating the account. It never changes, and is only used for connecting to the application._
+
 Users are authenticated through the API Gateway, using a JWTs (Json Web Tokens). There are two JWTs:
 - the Service Token (ST), used to authenticate the user against the service
 - the Token Granting Token (TGT), used to generate new STs if needed
@@ -186,7 +193,13 @@ A few security rules are in place to ensure security at all times:
 
 #### MS: Users
 
-TODO
+The Users microservice stores and manages all informational/personal data about users (meaning all data except account data - see the [authentication microservice](#ms-authentication) for more information). It is written in NestJS to allow for easy integration with databases and simple authorization management.
+
+As there are two types of users, we use a database for each user type:
+- the employers are stored on a PostgreSQL database, for its relational schema and ease of deployment
+- the seasonal workers are stored on a MongDB instance, because the data volume per user can grow rapidly, and workers' information can heavily differ from one to another
+
+The microservice also interacts with the OSS (Object Storage Service), in this case MinIO. This is used to store profile images, and various documents (mostly PDF files) for all users.
 
 #### MS: Offers
 
