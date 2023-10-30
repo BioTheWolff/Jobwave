@@ -138,6 +138,8 @@ As stated before, employers can create and manage job offers.
 Seasonal workers can apply for existing job offers, and employers can review their profiles before choosing an applicant.
 Employers can refuse as many profiles as they like, but can only accept one profile for a job offer.
 
+Seasonal workers are free to apply, and remove their application, at any given time and without cooldown or delay.
+
 _Note: Accepting a profile automatically refuses the other applicants and closes the job offer._
 
 #### User reviews
@@ -147,6 +149,16 @@ The rating is out of 5, and an optional comment can be left with the review.
 
 An employer-worker contract (from a job offer) is considered complete, and reviews can be written,
 if and only if the job offer is accepted and the end date of the job offer is in the past at the time of the review.
+
+#### Messaging system
+
+As stated above, employers bearing a Platinum subscription level key can initiate text conversations with applicants of their job offers. This text conversation is called a "chat".
+
+_Note: there can only exist one "chat" between a given seasonal worker and a given employer, and as such, "chats" are not linked to an application, but rather to the worker applying._
+
+This messaging system defines messages as being text only (meaning no voice messages, no file attachments, nor any other undisclosed type), encoded in UTF-8 standard, and with a maximum length of 500 characters.
+
+For better transparency between the employer and the seasonal worker, and since this is a professional setting, sent messages are uneditable and undeletable.
 
 ## Services architecture
 
@@ -219,30 +231,48 @@ The microservice also interacts with the OSS (Object Storage Service), in this c
 
 #### MS: Offers
 
-TODO
+The Offers microservice manages the job offers and everything that revolves around it. It is responsible for the management of the job offers themselves, the applications for said job offers, and the resolution of a job offer.
 
-- A seasonal worker can remove his application to a job offer
-- An employer can delete a job offer, which will remove all applications
-- Employers can accept only one candidate for a job offer
+The job offers and their related applications are stored in a PostgreSQL instance. The microservice is developed using Kotlin.
+
+A job offer can be resolved into one of these two states:
+- Cancelled: the job offer was cancelled by the employer
+- Completed: an applicant has been chosen by the employer
+
+If the offer is Cancelled, all current applications are thus denied.
+If the offer is Completed, the microservice denies all applications automatically, except for the selected applicant, which is granted this job.
+
+When a job offer is resolved, notifications are sent according to the resolution state. As it is not this microservice's responsibility, please see the [notifications microservice](#ms-notifications) for more information.
 
 #### MS: Reviews
 
-TODO
+In order for seasonal workers to determine if they want to work for an employer, and for employers to determine if a seasonal worker is a good fit, both can leave reviews. This is called R&R ("Reviews and Ratings").
 
-- Seasonal workers can leave ratings and comments for employers which they have worked for on the app
-- Employers can only leave ratings and comments on profiles of workers which they have hired before on the app
-  by both parties, and said contract has ended (the end date is in the past)
+This microservice is in charge of managing reviews and comments that can be left by both parties.
+It also manages the authorizations associated with the reviews, so the appropriate level of information is sent back depending on the client who requests it (i.e. employers depending on their subscription tier).
+
+The R&Rs are stored in a PostgreSQL instance. The microservice also uses Deno, which is an easy, fast and cloud-ready programming language.
+
+Please see the [appropriate section](#job-offers-and-applications) for reviews conditions and requirements.
 
 #### MS: Chats
 
-TODO
+The Chats' microservice is responsible for the storage of all conversations and messages exchanged between employers and seasonal workers. It directly receives the messages sent, as there is no "middleman" service/microservice.
+This is designed so that the microservice is the sole manager of conversations, and the microservice being shut down halts the functionality entirely.
 
-- Messages sent through the chat system are immutable and undeletable
-- Chats are not linked to an application, and only one chat can exist between a given employer and a given seasonal worker
+The microservice stores messages in a PostgreSQL instance, which is the database of choice when data length is known, and the amount of data will grow steadily. This microservice also uses Deno, for the same purposes as the [R&R microservice](#ms-reviews).
 
 #### MS: Recommendations
 
-Seasonal workers get job offers recommended to them using a recommendation system. They can choose several job categories to influence the system.
+This microservice aggregates information about job offers and seasonal workers in order to provide accurate recommendations tailored to the workers' desires.
+To accurately recommend offers, it is dependent on both the [Offers](#ms-offers) and the [R&R](#ms-reviews) microservices.
+
+Using the broker as primary means of information gathering, the microservice collects any updates deemed interesting about:
+- offers (creation, update, resolution)
+- reviews (creation, deletion)
+- users (preferred job category update)
+
+The microservice is made using Deno, connected to a PostgreSQL database.
 
 The recommendations should be based on:
 - recency of the job offer
@@ -252,7 +282,12 @@ The recommendations should be based on:
 
 #### MS: Notifications
 
-TODO
+In order for notifications to be sent to seasonal workers, we set up a dedicated microservice. It is written in Spring Webflux and pulls data from the message broker.
+
+It is used to send notifications in the following cases:
+- a job offer is resolved, thus accepting or denying the seasonal worker's application, if it has applied to said offer
+- a job offer is created, meaning the offer should be sent to all seasonal workers (provided the employer has the correct subscription level, see [employers](#employers))
+- a message is sent to the seasonal worker
 
 ## Communication: flow and security
 
