@@ -1,5 +1,9 @@
 # JobWave
 
+## Glossary
+
+TODO
+
 ## Project description
 
 TODO
@@ -7,6 +11,10 @@ TODO
 ### Users and data
 
 This section aims to document main "entities" that exist within the project, and the data they possess, induce and produce. Entities are abstract concepts that generally represent user accounts managed by either a natural or a legal person.
+
+#### Job categories
+
+Job categories are categories that all seasonal workers' experiences, and employers' job offers, should fit into. Those categories are immutable and cannot be modified by anybody except administrators.
 
 #### Seasonal workers
 
@@ -64,6 +72,14 @@ which is their sole entrypoint for the application.
     </li>
   </ul>
 </details>
+
+_Note: Some information about seasonal workers is hidden from employers until the worker applies for a job offer: contact info (for Free employers), ratings and comments, referrals, experiences, availabilities_
+
+A seasonal worker can, at any given time, change its preferred job category. This choice influences the recommendation system.
+
+A seasonal worker can also request, if needed, deletion of their account. Once confirmed, the deletion request is uncancellable and must be approved by an administrator.
+Accounts awaiting deletion, and deleted accounts, are masked (invisible) and their public data, as well as their interactions (applications, ratings, comments, etc.), are masked too.
+Please note that data can be stored on the application's side after the account has been deleted, according to the country's laws and regulations in effect.
 
 #### Employers
 
@@ -132,7 +148,7 @@ The rating is out of 5, and an optional comment can be left with the review.
 An employer-worker contract (from a job offer) is considered complete, and reviews can be written,
 if and only if the job offer is accepted and the end date of the job offer is in the past at the time of the review.
 
-## Architecture
+## Services architecture
 
 Due to the project's size and specialization, it has been cut down into several microservices (MS). Each microservice follows the SRP (Single Responsibility Principle).
 The main features are:
@@ -205,13 +221,24 @@ The microservice also interacts with the OSS (Object Storage Service), in this c
 
 TODO
 
+- A seasonal worker can remove his application to a job offer
+- An employer can delete a job offer, which will remove all applications
+- Employers can accept only one candidate for a job offer
+
 #### MS: Reviews
 
 TODO
 
+- Seasonal workers can leave ratings and comments for employers which they have worked for on the app
+- Employers can only leave ratings and comments on profiles of workers which they have hired before on the app
+  by both parties, and said contract has ended (the end date is in the past)
+
 #### MS: Chats
 
 TODO
+
+- Messages sent through the chat system are immutable and undeletable
+- Chats are not linked to an application, and only one chat can exist between a given employer and a given seasonal worker
 
 #### MS: Recommendations
 
@@ -227,29 +254,16 @@ The recommendations should be based on:
 
 TODO
 
-## Choices and decisions
+## Communication: flow and security
 
-As the project’s specifications are somewhat incomplete, we must make choices in order for things to be disambiguated.
-Thus:
+### Data trust: root and propagation
 
-- Some information about seasonal workers is hidden from employers until the worker applies for a job offer: contact info (for Free employers), ratings and comments, referrals, experiences, availabilities
-- The seasonal worker can, at any given time, choose the preferred job categories for them
-- The chat system is the responsibility of its own micro-service, and messages are passed through a message broker and
-  stored in the MS’s database
-- Messages sent through the chat system are immutable and undeletable
-- A seasonal worker can remove his application to a job offer
-- An employer can delete a job offer, which will remove all applications
-- Seasonal workers can leave ratings and comments for employers which they have worked for on the app
-- Employers can only leave ratings and comments on profiles of workers which they have hired before on the app
-  by both parties, and said contract has ended (the end date is in the past)
-- Employers can accept only one candidate for a job offer
-- Chats are not linked to an application, and only one chat can exist between a given employer and a given seasonal worker
+TODO: auth as RoT, replication across MS for WID/EID, JWT trust
 
-## Key security elements
+### Inter-service communication
 
-The following list ensures that security in the app is upheld and ensured.
+TODO: message broker and topics
 
-- It is impossible to undo/cancel an account deletion request
-- Accounts awaiting deletion and deleted accounts are masked (invisible) and their public data, as well as their
-  interactions (applications, ratings, comments, etc.), are masked too
-- Job categories are immutable and cannot be edited from the app
+### External communication
+
+TODO: api gateway and redirections
