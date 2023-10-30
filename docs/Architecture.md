@@ -149,9 +149,9 @@ The only support service in this project is an object storage (MinIO). It allows
 
 The first critical service is the API gateway (also called "gateway"). Being the only entrypoint into the application, its task is to handle incoming requests and connections and redirect to the correct functional microservice.
 It also ensures authentication and authorization throughout the whole application, and serves as a guard.
-The API gateway is created with Spring Security, which is a reliable and resilient framework that fits our needs.
+The API gateway is created with [KongGateway](https://konghq.com/products/kong-gateway), which is a reliable and resilient framework that fits our needs.
 
-_Note: The gateway is not responsible for user storage and management, as this functionality is responsibility of a functional microservice. The gateway only serves as a proxy and a token generator in the authentication process._
+_Note: The gateway is not responsible for user storage and management, as this functionality is responsibility of a functional microservice. The gateway only serves as a proxy and a token verifier in the authentication process._
 
 The second critical service is the message broker. The broker serves as a communication bridge between microservices, which allows for asynchronous and secure communication.
 
@@ -165,19 +165,42 @@ Functional microservices can depend on data managed by other functional microser
 
 _NB: Communication between functional microservices should only be through backbone services (such as the broker), and if possible, in an asynchronous way._
 
-#### Seasonal workers
+#### MS: Authentication
+
+The authentication microservice is responsible for all user's authentication and token generation and is written using Spring Security. The microservice is purposefully detached from the Users MS in order to ensure functionality for connected users if the Authentication MS were to shut down.
+
+Users are authenticated through the API Gateway, using a JWTs (Json Web Tokens). There are two JWTs:
+- the Service Token (ST), used to authenticate the user against the service
+- the Token Granting Token (TGT), used to generate new STs if needed
+
+A few security rules are in place to ensure security at all times:
+- the TGT must only be issued upon successful authentication using manual means of connection (i.e. email/password, security key, FIDO2, etc.)
+- the TGT should be set with a medium expiry time (e.g. one or two days)
+- a new ST must be issued only if:
+  - the current ST has expired
+  - there is no existing ST for this user, or the user is unable to provide one
+- a new ST must be issued only through:
+  - completion of a successful manual authentication
+  - presence of a valid, not outdated, TGT provided by the user
+- all STs must be set with a rationally small expiry time (e.g. a maximum of several hours) in order to mitigate token replication/guessing
+
+#### MS: Users
 
 TODO
 
-#### Employers
+#### MS: Offers
 
 TODO
 
-#### Reviews and comments
+#### MS: Reviews
 
 TODO
 
-#### Recommendation system
+#### MS: Chats
+
+TODO
+
+#### MS: Recommendations
 
 Seasonal workers get job offers recommended to them using a recommendation system. They can choose several job categories to influence the system.
 
@@ -187,7 +210,7 @@ The recommendations should be based on:
 - company rating
 - company subscription level
 
-#### Job offers and applications
+#### MS: Notifications
 
 TODO
 
