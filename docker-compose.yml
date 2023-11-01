@@ -1,15 +1,23 @@
+version: '3.9'
+name: jobwave
 
 networks:
   broker:
     name: "jobwave-broker-network"
+  gateway:
+    name: "jobwave-gateway-network"
+
+include:
+  - docker/services/api-gateway.yml
 
 services:
   kafka:
     image: 'bitnami/kafka:3.6.0-debian-11-r0'
+    container_name: 'jobwave-broker'
     networks:
       - broker
     volumes:
-      - ./data/kafka:/bitnami/kafka
+      - ./docker/data/kafka:/bitnami/kafka
     environment:
       # TODO: use Zookeeper for production
       # KRaft config
