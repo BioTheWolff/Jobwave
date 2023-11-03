@@ -197,8 +197,7 @@ _NB: Communication between functional microservices should only be through backb
 
 The authentication microservice is responsible for all user's authentication and token generation and is written using Spring Security. The microservice is purposefully detached from the Users MS in order to ensure functionality for connected users if the Authentication MS were to shut down.
 
-The microservice is the root of trust of the application and stores all connection data required for users to authenticate.
-
+The microservice stores all connection data required for users to authenticate:
 - for employers, this includes the Employer ID (EID) and the API key.
 - for seasonal workers, this includes the Seasonal Worker ID (WID), the canonical username and the password.
 
@@ -293,7 +292,15 @@ It is used to send notifications in the following cases:
 
 ### Data trust: root and propagation
 
-TODO: auth as RoT, replication across MS for WID/EID, JWT trust
+In order for the application to be reliable, and for it to be able to trust its own internal components, a data security and reliability policy must be put in place.
+This is what we call "data trust".
+
+The Root of Trust (RoT) is the [authentication microservice](#ms-authentication).
+It is the only microservice that stores the authentication methods for users, which also means it is the only way of authenticating them.
+Generated JWTs are signed using an asymetric key.
+This ensures that the signature can be verified by all microservices, and the API gateway, without the private key to be shared.
+
+Each microservice stores the WIDs (Worker IDs) and EIDs (Employer IDs) they receive and process, in order to use them as identification keys (or "primary keys" in a database).
 
 ### Inter-service communication
 
@@ -301,4 +308,10 @@ TODO: message broker and topics
 
 ### External communication
 
-TODO: api gateway and redirections
+As stated in its section, the [API gateway](#critical-services) is the only entrypoint of the application. The gateway serves as a redirection hub, which guides all requests to the correct microservice based on the request path.
+
+Paths are matched with a then-stripped prefix path. For example, a path `/users/my` would be forwarded to the [users microservice](#ms-users) with the path `/my`.
+
+It is the gateway's responsibility to verify all JWTs that are given to it. Only then, can the request be redirected to the correct microservice.
+Moreover, only specific routes are "public" (without JWT bearing), which means the default is a fully-protected microservice against which users have to authentify.
+This ensures the microservice which receives the request doesn't have to verify the JWT itself.
