@@ -173,18 +173,9 @@ The "critical" services can be seen as "top-level" or "backbone" services. They 
 
 The only support service in this project is an object storage (MinIO). It allows for image and file storage and management, for both the seasonal workers and the employers.
 
-#### Critical services
-
-The first critical service is the API gateway (also called "gateway"). Being the only entrypoint into the application, its task is to handle incoming requests and connections and redirect to the correct functional microservice.
-It also ensures authentication and authorization throughout the whole application, and serves as a guard.
-The API gateway is created with [KongGateway](https://konghq.com/products/kong-gateway), which is a reliable and resilient framework that fits our needs.
-
-_Note: The gateway is not responsible for user storage and management, as this functionality is responsibility of a functional microservice. The gateway only serves as a proxy and a token verifier in the authentication process._
-
-The second critical service is the message broker. The broker serves as a communication bridge between microservices, which allows for asynchronous and secure communication.
-
-The message broker used in this project is Apache Kafka. Its multi-tenancy management improves the overall security by ensuring each functional microservice has its own credentials.
-Moreover, microservices can leverage the consumer group principle to consume topics and use given messages for different purposes.
+There are two critical services:
+- the API gateway ([see section](#external-communication))
+- the message broker ([see section](#inter-microservice-communication))
 
 ### Functional microservices
 
@@ -202,6 +193,8 @@ The microservice stores all connection data required for users to authenticate:
 - for seasonal workers, this includes the Seasonal Worker ID (WID), the canonical username and the password.
 
 _NB: The canonical username is the username used upon creating the account. It never changes, and is only used for connecting to the application._
+
+##### Json Web Tokens
 
 Users are authenticated through the API Gateway, using a JWTs (Json Web Tokens). There are two JWTs:
 - the Service Token (ST), used to authenticate the user against the service
@@ -288,7 +281,7 @@ It is used to send notifications in the following cases:
 - a job offer is created, meaning the offer should be sent to all seasonal workers (provided the employer has the correct subscription level, see [employers](#employers))
 - a message is sent to the seasonal worker
 
-## Communication: flow and security
+## Communication and security
 
 ### Data trust: root and propagation
 
@@ -302,16 +295,24 @@ This ensures that the signature can be verified by all microservices, and the AP
 
 Each microservice stores the WIDs (Worker IDs) and EIDs (Employer IDs) they receive and process, in order to use them as identification keys (or "primary keys" in a database).
 
-### Inter-service communication
-
-TODO: message broker and topics
-
 ### External communication
 
-As stated in its section, the [API gateway](#critical-services) is the only entrypoint of the application. The gateway serves as a redirection hub, which guides all requests to the correct microservice based on the request path.
+The API gateway is the only entrypoint of the application. The gateway serves as a redirection hub, which guides all requests to the correct microservice based on the request path. The API gateway is created with [KongGateway](https://konghq.com/products/kong-gateway), which is a reliable and resilient framework that fits our needs.
 
-Paths are matched with a then-stripped prefix path. For example, a path `/users/my` would be forwarded to the [users microservice](#ms-users) with the path `/my`.
+Paths are matched with a then-stripped prefix path. For example, a path `/users/my` would be forwarded to the [users microservice](#ms-users) with the path `/my`. Note that the rest of the request is left as-is, meaning the body, the request parameters, as well as the method are kept.
 
 It is the gateway's responsibility to verify all JWTs that are given to it. Only then, can the request be redirected to the correct microservice.
 Moreover, only specific routes are "public" (without JWT bearing), which means the default is a fully-protected microservice against which users have to authentify.
 This ensures the microservice which receives the request doesn't have to verify the JWT itself.
+
+_Note: The gateway is not responsible for user storage and management, as this functionality is responsibility of the [authentication microservice](#ms-authentication). The gateway only serves as a proxy and a token verifier in the authentication process._
+
+### Inter-microservice communication
+
+The message broker used in this project is Apache Kafka. The broker serves as a communication bridge between microservices, which allows for asynchronous and secure communication.
+Kafka's multi-tenancy management improves the overall security by ensuring each functional microservice has its own credentials.
+Moreover, microservices can leverage the consumer group principle to consume topics and use given messages for different purposes.
+
+#### Interactions
+
+TODO
