@@ -316,6 +316,32 @@ The message broker used in this project is [Apache Kafka](https://kafka.apache.o
 Kafka's multi-tenancy management improves the overall security by ensuring each functional microservice has its own credentials.
 Moreover, microservices can leverage the consumer group principle to consume topics and use given messages for different purposes.
 
+All topics are named after the subject of the topic, and not the microservice they are tied to. This is chosen so that one topic can be shared between different consumers that take interest in it.
+
 #### Interactions
 
-TODO
+Here is the list of topics used and their purpose:
+
+- Inform of a new user creation in order for the profile to be created
+  - topic: `worker.registration`
+  - producer: [authentication MS](#ms-authentication)
+  - consumer: [users MS](#ms-users)
+- Feed the recommendation system upon updates
+  - offer updates and resolutions:
+    - topics: `offer.resolution`
+    - producer: [offers MS](#ms-offers)
+    - consumer: [recommendation MS](#ms-recommendations)
+  - seasonal workers' preferred job category:
+    - topic: `worker.preference.category`
+    - producer: [users MS](#ms-users)
+    - consumer: [recommendation MS](#ms-recommendations)
+- Inform of the creation of a new job offer
+  - topic: `offer.creation`
+  - producer: [offers MS](#ms-offers)
+  - consumers:
+    - [recommendation MS](#ms-recommendations): to feed the recommendation system
+    - [notifications MS](#ms-notifications): see the [list of notifications usecases](#ms-notifications)
+- Inform of a new chat message
+  - topic: `message.creation`
+  - producer: [chats MS](#ms-chats)
+  - consumer: [notifications MS](#ms-notifications)
