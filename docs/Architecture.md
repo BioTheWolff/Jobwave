@@ -2,7 +2,8 @@
 
 ## Glossary
 
-TODO
+- Entities: abstract concepts that generally represent user accounts managed by either a natural or a legal person.
+- MS: microservices, which are small, independent and specialized services that compose the application.
 
 ## Project description
 
@@ -10,7 +11,7 @@ TODO
 
 ### Users and data
 
-This section aims to document main "entities" that exist within the project, and the data they possess, induce and produce. Entities are abstract concepts that generally represent user accounts managed by either a natural or a legal person.
+This section aims to document main entities that exist within the project, and the data they possess, induce and produce.
 
 #### Job categories
 
@@ -126,11 +127,11 @@ As stated before, employers can create and manage job offers.
 <details>
   <summary>Composition of a job offer</summary>
   <ul>
-    <li>job title</li>
-    <li>job category</li>
-    <li>start and end dates</li>
-    <li>company</li>
-    <li>salary</li>
+    <li>a job title</li>
+    <li>a job category</li>
+    <li>a start and an end dates</li>
+    <li>a company</li>
+    <li>a salary</li>
     <li>benefits (if any, like company car, etc.)</li>
   </ul>
 </details>
@@ -171,7 +172,7 @@ The main features are:
 
 The "critical" services can be seen as "top-level" or "backbone" services. They are the services (nearly) all other microservices rely on to properly function. On the other hand, "support" services are useful to several microservices for a certain purpose, and are decoupled from them in order to reduce software redundancy and increase data pooling.
 
-The only support service in this project is an object storage (MinIO). It allows for image and file storage and management, for both the seasonal workers and the employers.
+The only support service in this project is an object storage ([MinIO](https://min.io/)). It allows for image and file storage and management, for both the seasonal workers and the employers.
 
 There are two critical services:
 - the API gateway ([see section](#external-communication))
@@ -182,17 +183,17 @@ There are two critical services:
 This section describes each "functional" microservice. A functional microservice manages one or several functionalities for the project.
 Functional microservices can depend on data managed by other functional microservices, although they should never contact eachother directly.
 
-_NB: Communication between functional microservices should only be through backbone services (such as the broker), and if possible, in an asynchronous way._
+_Note: Communication between functional microservices should only be through backbone services (such as the broker), and if possible, in an asynchronous way._
 
 #### MS: Authentication
 
-The authentication microservice is responsible for all user's authentication and token generation and is written using Spring Security. The microservice is purposefully detached from the Users MS in order to ensure functionality for connected users if the Authentication MS were to shut down.
+The authentication microservice is responsible for all entities' authentication and token generation and is written using [Spring Security](https://spring.io/projects/spring-security). The microservice is purposefully detached from the Users MS in order to ensure functionality for connected users if the Authentication MS were to shut down.
 
 The microservice stores all connection data required for users to authenticate:
 - for employers, this includes the Employer ID (EID) and the API key.
 - for seasonal workers, this includes the Seasonal Worker ID (WID), the canonical username and the password.
 
-_NB: The canonical username is the username used upon creating the account. It never changes, and is only used for connecting to the application._
+_Note: The canonical username is the username used upon creating the account. It never changes, and is only used for connecting to the application._
 
 ##### Json Web Tokens
 
@@ -213,19 +214,19 @@ A few security rules are in place to ensure security at all times:
 
 #### MS: Users
 
-The Users microservice stores and manages all informational/personal data about users (meaning all data except account data - see the [authentication microservice](#ms-authentication) for more information). It is written in NestJS to allow for easy integration with databases and simple authorization management.
+The Users microservice stores and manages all informational/personal data about users (meaning all data except account data - see the [authentication microservice](#ms-authentication) for more information). It is written in [NestJS](https://nestjs.com/) to allow for easy integration with databases and simple authorization management.
 
 As there are two types of users, we use a database for each user type:
-- the employers are stored on a PostgreSQL database, for its relational schema and ease of deployment
-- the seasonal workers are stored on a MongDB instance, because the data volume per user can grow rapidly, and workers' information can heavily differ from one to another
+- the employers are stored on a [PostgreSQL](https://www.postgresql.org/) database, for its relational schema and ease of deployment
+- the seasonal workers are stored on a [MongDB](https://www.mongodb.com/) instance, because the data volume per user can grow rapidly, and workers' information can heavily differ from one to another
 
-The microservice also interacts with the OSS (Object Storage Service), in this case MinIO. This is used to store profile images, and various documents (mostly PDF files) for all users.
+The microservice also interacts with the OSS (Object Storage Service), in this case [MinIO](https://min.io/). This is used to store profile images, and various documents (mostly PDF files) for all users.
 
 #### MS: Offers
 
 The Offers microservice manages the job offers and everything that revolves around it. It is responsible for the management of the job offers themselves, the applications for said job offers, and the resolution of a job offer.
 
-The job offers and their related applications are stored in a PostgreSQL instance. The microservice is developed using Kotlin.
+The job offers and their related applications are stored in a [PostgreSQL](https://www.postgresql.org/) instance. The microservice is developed using [Kotlin](https://kotlinlang.org/).
 
 A job offer can be resolved into one of these two states:
 - Cancelled: the job offer was cancelled by the employer
@@ -243,7 +244,7 @@ In order for seasonal workers to determine if they want to work for an employer,
 This microservice is in charge of managing reviews and comments that can be left by both parties.
 It also manages the authorizations associated with the reviews, so the appropriate level of information is sent back depending on the client who requests it (i.e. employers depending on their subscription tier).
 
-The R&Rs are stored in a PostgreSQL instance. The microservice also uses Deno, which is an easy, fast and cloud-ready programming language.
+The R&Rs are stored in a [PostgreSQL](https://www.postgresql.org/) instance. The microservice also uses [Deno](https://deno.com/), which is an easy, fast and cloud-ready programming language.
 
 Please see the [appropriate section](#job-offers-and-applications) for reviews conditions and requirements.
 
@@ -252,7 +253,7 @@ Please see the [appropriate section](#job-offers-and-applications) for reviews c
 The Chats' microservice is responsible for the storage of all conversations and messages exchanged between employers and seasonal workers. It directly receives the messages sent, as there is no "middleman" service/microservice.
 This is designed so that the microservice is the sole manager of conversations, and the microservice being shut down halts the functionality entirely.
 
-The microservice stores messages in a PostgreSQL instance, which is the database of choice when data length is known, and the amount of data will grow steadily. This microservice also uses Deno, for the same purposes as the [R&R microservice](#ms-reviews).
+The microservice stores messages in a [PostgreSQL](https://www.postgresql.org/) instance, which is the database of choice when data length is known, and the amount of data will grow steadily. This microservice also uses [Deno](https://deno.com/), for the same purposes as the [R&R microservice](#ms-reviews).
 
 #### MS: Recommendations
 
@@ -264,7 +265,7 @@ Using the broker as primary means of information gathering, the microservice col
 - reviews (creation, deletion)
 - users (preferred job category update)
 
-The microservice is made using Deno, connected to a PostgreSQL database.
+The microservice is made using [Deno](https://deno.com/), connected to a [PostgreSQL](https://www.postgresql.org/) database.
 
 The recommendations should be based on:
 - recency of the job offer
@@ -274,7 +275,7 @@ The recommendations should be based on:
 
 #### MS: Notifications
 
-In order for notifications to be sent to seasonal workers, we set up a dedicated microservice. It is written in Spring Webflux and pulls data from the message broker.
+In order for notifications to be sent to seasonal workers, we set up a dedicated microservice. It is written in [Spring Webflux](https://docs.spring.io/spring-framework/reference/web/webflux.html) and pulls data from the message broker.
 
 It is used to send notifications in the following cases:
 - a job offer is resolved, thus accepting or denying the seasonal worker's application, if it has applied to said offer
@@ -291,7 +292,7 @@ This is what we call "data trust".
 The Root of Trust (RoT) is the [authentication microservice](#ms-authentication).
 It is the only microservice that stores the authentication methods for users, which also means it is the only way of authenticating them.
 Generated JWTs are signed using an asymetric key.
-This ensures that the signature can be verified by all microservices, and the API gateway, without the private key to be shared.
+This ensures that the signature can be verified by all microservices, and the API gateway, without sharing the private key.
 
 Each microservice stores the WIDs (Worker IDs) and EIDs (Employer IDs) they receive and process, in order to use them as identification keys (or "primary keys" in a database).
 
@@ -309,7 +310,7 @@ _Note: The gateway is not responsible for user storage and management, as this f
 
 ### Inter-microservice communication
 
-The message broker used in this project is Apache Kafka. The broker serves as a communication bridge between microservices, which allows for asynchronous and secure communication.
+The message broker used in this project is [Apache Kafka](https://kafka.apache.org/). The broker serves as a communication bridge between microservices, which allows for asynchronous and secure communication.
 Kafka's multi-tenancy management improves the overall security by ensuring each functional microservice has its own credentials.
 Moreover, microservices can leverage the consumer group principle to consume topics and use given messages for different purposes.
 
