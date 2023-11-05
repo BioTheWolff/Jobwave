@@ -4,10 +4,12 @@
 
 - Entities: abstract concepts that generally represent user accounts managed by either a natural or a legal person.
 - MS: microservices, which are small, independent and specialized services that compose the application.
+- Service Token (ST): a Json Web Token (JWT) used to authenticate a user against a microservice.
+- Token Granting Token (TGT): a JWT used to generate new STs if needed.
 
 ## Project description
 
-TODO
+Jobwave is a LinkedIn-like application dedicated to seasonal workers and employers. Seasonal workers can create a profile, search for jobs, and apply to them. Employers can create a profile, post jobs, and view applications. Both can rate each-others after finishing a job. They can also chat with each other prior if a seasonal worker has applied to an employer's posted job. Jobwave is designed to be a mobile application, and as such, it is only available on Android and iOS. Its architecture is based on microservices, which are small, independent and specialized services that compose the application. 
 
 ### Users and data
 
