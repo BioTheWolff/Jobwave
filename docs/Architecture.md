@@ -4,8 +4,10 @@
 
 - Entities: abstract concepts that generally represent user accounts managed by either a natural or a legal person.
 - MS: microservices, which are small, independent and specialized services that compose the application.
-- Service Token (ST): a Json Web Token (JWT) used to authenticate a user against a microservice.
-- Token Granting Token (TGT): a JWT used to generate new STs if needed.
+- Service Ticket (ST): an opaque string used to authenticate its bearer against a microservice.
+- Ticket-Granting Ticket (TGT): an opaque string that grants its bearer the ability to generate a new Service Ticket.
+
+_Note: although the names "Service Ticket" and "Ticket-Granting Ticket" derive from the [CAS v6.6 Specification](https://apereo.github.io/cas/6.6.x/protocol/CAS-Protocol-Specification.html#3-cas-entities) and follow their general principle, their implementation or use might differ._
 
 ## Project description
 
@@ -197,11 +199,10 @@ The microservice stores all connection data required for users to authenticate:
 
 _Note: The canonical username is the username used upon creating the account. It never changes, and is only used for connecting to the application._
 
-##### Json Web Tokens
+##### Tickets and JWTs
 
-Users are authenticated through the API Gateway, using a JWTs (Json Web Tokens). There are two JWTs:
-- the Service Token (ST), used to authenticate the user against the service
-- the Token Granting Token (TGT), used to generate new STs if needed
+Users are authenticated through the API Gateway using an ST (Service Ticket, [see glossary](#glossary)).
+In this application, both STs and TGTs follow the JWT (Json Web Token) format.
 
 A few security rules are in place to ensure security at all times:
 - the TGT must only be issued upon successful authentication using manual means of connection (i.e. email/password, security key, FIDO2, etc.)
