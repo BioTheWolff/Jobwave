@@ -1,0 +1,159 @@
+# Jobwave API's endpoints
+
+Here are listed all the endpoints of the Jobwave API, as long as the accepted method and the given body, if any.
+
+## Authentication `/auth`
+
+- `/login`
+  - Method: `POST`
+  - Body:
+    - `canonical_username`: string
+    - `password`: string
+- `/renew`
+  - Method: `POST`
+  - Cookie: `TGT token`
+- `/new-password`
+  - Method: `POST`
+  - Body:
+    - `old_password`: string
+    - `new_password`: string
+
+## Seasonal `/users`
+
+- `/me`
+  - Method: `GET`
+  - Cookie: `ST token`
+  - Return the seasonal of the current session
+- `/me`
+  - Method: `DELETE`
+  - Cookie: `ST token`
+- `/me`
+  - Method: `PUT`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: string
+    - `firstname`: string
+    - `lastname`: string
+    - `biography`: string
+    - `gender`: enum
+    - `birthdate`: date
+    - `country_code`: string
+    - `phone`: string
+    - `email`: string
+    - `postal_address`: string
+    - `profile_picture`: file
+    - `resume`: file
+    - `job_categories`: array of job categories,
+    - `referrals`: array of referrals,
+    - `experiences`: experiences,
+    - `availabilities`: array of availabilities, 
+- `/me`
+  - Method: `POST`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: null
+    - `password`: string
+    - `firstname`: string
+    - `lastname`: string
+    - `biography`: string
+    - `gender`: enum
+    - `birthdate`: date
+    - `country_code`: string
+    - `phone`: string
+    - `email`: string
+    - `postal_address`: string
+    - `profile_picture`: file
+    - `resume`: file
+    - `job_categories`: array of job categories,
+    - `referrals`: array of referrals,
+    - `experiences`: experiences,
+    - `availabilities`: array of availabilities, 
+- `/me/availabilities/$id`
+  - Method: `DELETE`
+  - Cookie: `ST token`
+- `/me/availabilities/$id`
+  - Method: `PUT`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: string,
+    - `job_title`: string,
+    - `job_categories`: array of job categories,
+    - `start_date`: Date,
+    - `end_date`: Date,
+    - `country_code`: string, 
+- `/me/availabilities`
+  - Method: `POST`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: null,
+    - `job_title`: string,
+    - `job_categories`: array of job categories,
+    - `start_date`: Date,
+    - `end_date`: Date,
+    - `country_code`: string,
+- `/me/experiences/$id`
+  - Method: `DELETE`
+  - Cookie: `ST token`
+- `/me/experiences/$id`
+  - Method: `PUT`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: string
+    - `job`: job title
+    - `job_category`: string
+    - `start_date`: Date
+    - `end_date`: Date
+    - `employer_name`: string
+    - `employer_address`: string
+- `/me/experiences`
+  - Method: `POST`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: null
+    - `job`: job title
+    - `job_category`: string
+    - `start_date`: Date
+    - `end_date`: Date
+    - `employer_name`: string
+    - `employer_address`: string
+- `/me/referrals/$id`
+  - Method: `PUT`
+  - Cookie: `ST token`
+- `/me/referrals/$id`
+  - Method: `DELETE `
+  - Cookie: `ST token`
+  - Body:
+    - `id`: string
+    - `firstname`: string
+    - `lastname`: string
+    - `email`: string
+    - `phone`: string
+    - `employer_name`: string
+    - `employer_address`: string
+- `/me/referrals`
+  - Method: `POST`
+  - Cookie: `ST token`
+  - Body:
+    - `id`: null
+    - `firstname`: string
+    - `lastname`: string
+    - `email`: string
+    - `phone`: string
+    - `employer_name`: string
+    - `employer_address`: string
+- `/seasonals`
+  - Method: `GET`
+  - Cookie: `ST token`
+    - Return all seasonals
+- `/seasonals/$id`
+  - Method: `GET`
+  - Cookie: `ST token`
+    - Return seasonal of id `$id`
+- `/employers`
+  - Method: `GET`
+  - Cookie: `ST token`
+    - Return all employers
+- `/employers/$id`
+  - Method: `GET`
+  - Cookie: `ST token`
+    - Return employer of id `$id`
