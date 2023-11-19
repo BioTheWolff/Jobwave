@@ -29,17 +29,17 @@ which is their sole entrypoint for the application.
 <details>
   <summary>"Primary" information</summary>
   <ul>
-    <li>a full name (first and last names)</li>
-    <li>a gender</li>
-    <li>a birthdate</li>
-    <li>a nationality</li>
-    <li>a mobile phone number</li>
-    <li>an email address</li>
-    <li>a postal address</li>
-    <li>a profile picture</li>
-    <li>a CV (Curriculum Vitae)</li>
-    <li>a small biography</li>
-    <li>multiple job categories</li>
+    <li>a full name (first and last names),</li>
+    <li>a gender,</li>
+    <li>a birthdate,</li>
+    <li>a nationality,</li>
+    <li>a mobile phone number,</li>
+    <li>an email address,</li>
+    <li>a postal address,</li>
+    <li>a profile picture,</li>
+    <li>a CV (Curriculum Vitae),</li>
+    <li>a small biography,</li>
+    <li>multiple job categories.</li>
   </ul>
 </details>
 
@@ -47,32 +47,32 @@ which is their sole entrypoint for the application.
   <summary>Employers-oriented information</summary>
   <ul>
     <li>
-      referrals: references of people who the seasonal workers have worked for (generally, a manager)
+      referrals: references of people who the seasonal workers have worked for (generally, a manager),
       <ul>
-        <li>their full name</li>
-        <li>their company</li>
-        <li>the company’s postal address</li>
-        <li>the person’s work email</li>
-        <li>the person’s work phone number</li>
+        <li>their full name,</li>
+        <li>their company,</li>
+        <li>the company’s postal address,</li>
+        <li>the person’s work email,</li>
+        <li>the person’s work phone number.</li>
       </ul>
     </li>
     <li>
-      past work experiences
+      past work experiences,
       <ul>
-        <li>job title</li>
-        <li>job category</li>
-        <li>company name</li>
-        <li>company’s postal address</li>
-        <li>start and end dates (down to the day)</li>
+        <li>job title,</li>
+        <li>job category,</li>
+        <li>company name,</li>
+        <li>company’s postal address,</li>
+        <li>start and end dates (down to the day).</li>
       </ul>
     </li>
     <li>
-      availabilities: when and where the worker will be available for work
+      availabilities: when and where the worker will be available for work,
       <ul>
-        <li>job category</li>
-        <li>job title if possible</li>
-        <li>start and end dates (down to the day)</li>
-        <li>their geographical zone</li>
+        <li>job category,</li>
+        <li>job title if possible,</li>
+        <li>start and end dates (down to the day),</li>
+        <li>their geographical zone.</li>
       </ul>
     </li>
   </ul>
@@ -149,7 +149,7 @@ _Note: Accepting a profile automatically refuses the other applicants and closes
 
 #### User reviews
 
-Seasonal workers and employers can both leave reviews on eachother after a completed job.
+Seasonal workers and employers can both leave reviews on each-other after a completed job.
 The rating is out of 5, and an optional comment can be left with the review.
 
 An employer-worker contract (from a job offer) is considered complete, and reviews can be written,
@@ -169,8 +169,8 @@ For better transparency between the employer and the seasonal worker, and since 
 
 Due to the project's size and specialization, it has been cut down into several microservices (MS). Each microservice follows the SRP (Single Responsibility Principle).
 The main features are:
-- decoupling: services are only responsible for their own task and can easily be swapped out since they interact through a third party
-- overload risk reduction: services can be scaled on-demand because of their independence
+- decoupling: services are only responsible for their own task and can easily be swapped out since they interact through a third party,
+- overload risk reduction: services can be scaled on-demand because of their independence.
 
 The following diagram summarizes the architecture of the application and its interactions.
 
@@ -212,20 +212,20 @@ A few security rules are in place to ensure security at all times:
 - the TGT must only be issued upon successful authentication using manual means of connection (i.e. email/password, security key, FIDO2, etc.)
 - the TGT should be set with a medium expiry time (e.g. one or two days)
 - a new ST must be issued only if:
-  - the current ST has expired
-  - there is no existing ST for this user, or the user is unable to provide one
+  - the current ST has expired,
+  - there is no existing ST for this user, or the user is unable to provide one.
 - a new ST must be issued only through:
-  - completion of a successful manual authentication
-  - presence of a valid, not outdated, TGT provided by the user
-- all STs must be set with a rationally small expiry time (e.g. a maximum of several hours) in order to mitigate token replication/guessing
+  - completion of a successful manual authentication,
+  - presence of a valid, not outdated, TGT provided by the user,
+- all STs must be set with a rationally small expiry time (e.g. a maximum of several hours) in order to mitigate token replication/guessing.
 
 #### MS: Users
 
 The Users microservice stores and manages all informational/personal data about users (meaning all data except account data - see the [authentication microservice](#ms-authentication) for more information). It is written in [NestJS](https://nestjs.com/) to allow for easy integration with databases and simple authorization management.
 
 As there are two types of users, we use a database for each user type:
-- the employers are stored on a [PostgreSQL](https://www.postgresql.org/) database, for its relational schema and ease of deployment
-- the seasonal workers are stored on a [MongDB](https://www.mongodb.com/) instance, because the data volume per user can grow rapidly, and workers' information can heavily differ from one to another
+- the employers are stored on a [PostgreSQL](https://www.postgresql.org/) database, for its relational schema and ease of deployment.
+- the seasonal workers are stored on a [MongoDB](https://www.mongodb.com/) instance, because the data volume per user can grow rapidly, and workers' information can heavily differ from one to another.
 
 The microservice also interacts with the OSS (Object Storage Service), in this case [MinIO](https://min.io/). This is used to store profile images, and various documents (mostly PDF files) for all users.
 
@@ -236,8 +236,8 @@ The Offers microservice manages the job offers and everything that revolves arou
 The job offers and their related applications are stored in a [PostgreSQL](https://www.postgresql.org/) instance. The microservice is developed using [Kotlin](https://kotlinlang.org/).
 
 A job offer can be resolved into one of these two states:
-- Cancelled: the job offer was cancelled by the employer
-- Completed: an applicant has been chosen by the employer
+- Cancelled: the job offer was cancelled by the employer,
+- Completed: an applicant has been chosen by the employer.
 
 If the offer is Cancelled, all current applications are thus denied.
 If the offer is Completed, the microservice denies all applications automatically, except for the selected applicant, which is granted this job.
@@ -268,26 +268,26 @@ This microservice aggregates information about job offers and seasonal workers i
 To accurately recommend offers, it is dependent on both the [Offers](#ms-offers) and the [R&R](#ms-reviews) microservices.
 
 Using the broker as primary means of information gathering, the microservice collects any updates deemed interesting about:
-- offers (creation, update, resolution)
-- reviews (creation, deletion)
-- users (preferred job category update)
+- offers (creation, update, resolution),
+- reviews (creation, deletion),
+- users (preferred job category update).
 
 The microservice is made using [Deno](https://deno.com/), connected to a [PostgreSQL](https://www.postgresql.org/) database.
 
 The recommendations should be based on:
-- recency of the job offer
-- relevant job categories found in the offer
-- company rating
-- company subscription level
+- recency of the job offer,
+- relevant job categories found in the offer,
+- company rating,
+- company subscription level.
 
 #### MS: Notifications
 
 In order for notifications to be sent to seasonal workers, we set up a dedicated microservice. It is written in [Spring Webflux](https://docs.spring.io/spring-framework/reference/web/webflux.html) and pulls data from the message broker.
 
 It is used to send notifications in the following cases:
-- a job offer is resolved, thus accepting or denying the seasonal worker's application, if it has applied to said offer
-- a job offer is created, meaning the offer should be sent to all seasonal workers (provided the employer has the correct subscription level, see [employers](#employers))
-- a message is sent to the seasonal worker
+- a job offer is resolved, thus accepting or denying the seasonal worker's application, if it has applied to said offer,
+- a job offer is created, meaning the offer should be sent to all seasonal workers (provided the employer has the correct subscription level, see [employers](#employers)),
+- a message is sent to the seasonal worker.
 
 ## Communication and security
 
@@ -327,26 +327,26 @@ All topics are named after the subject of the topic, and not the microservice th
 
 Here is the list of topics used and their purpose:
 
-- Inform of a new user creation in order for the profile to be created
-  - topic: `worker.registration`
-  - producer: [authentication MS](#ms-authentication)
-  - consumer: [users MS](#ms-users)
-- Feed the recommendation system upon updates
+- Inform of a new user creation in order for the profile to be created,
+  - topic: `worker.registration`,
+  - producer: [authentication MS](#ms-authentication),
+  - consumer: [users MS](#ms-users),
+- Feed the recommendation system upon updates,
   - offer updates and resolutions:
-    - topics: `offer.resolution`
-    - producer: [offers MS](#ms-offers)
-    - consumer: [recommendation MS](#ms-recommendations)
+    - topics: `offer.resolution`,
+    - producer: [offers MS](#ms-offers),
+    - consumer: [recommendation MS](#ms-recommendations),
   - seasonal workers' preferred job category:
-    - topic: `worker.preference.category`
-    - producer: [users MS](#ms-users)
-    - consumer: [recommendation MS](#ms-recommendations)
-- Inform of the creation of a new job offer
-  - topic: `offer.creation`
-  - producer: [offers MS](#ms-offers)
+    - topic: `worker.preference.category`,
+    - producer: [users MS](#ms-users),
+    - consumer: [recommendation MS](#ms-recommendations),
+- Inform of the creation of a new job offer,
+  - topic: `offer.creation`,
+  - producer: [offers MS](#ms-offers),
   - consumers:
-    - [recommendation MS](#ms-recommendations): to feed the recommendation system
-    - [notifications MS](#ms-notifications): see the [list of notifications usecases](#ms-notifications)
-- Inform of a new chat message
-  - topic: `message.creation`
-  - producer: [chats MS](#ms-chats)
-  - consumer: [notifications MS](#ms-notifications)
+    - [recommendation MS](#ms-recommendations): to feed the recommendation system,
+    - [notifications MS](#ms-notifications): see the [list of notifications usecases](#ms-notifications),
+- Inform of a new chat message,
+  - topic: `message.creation`,
+  - producer: [chats MS](#ms-chats),
+  - consumer: [notifications MS](#ms-notifications).
