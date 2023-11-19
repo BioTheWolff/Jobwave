@@ -301,7 +301,7 @@ Each microservice stores the WIDs (Worker IDs) and EIDs (Employer IDs) they rece
 
 ### External communication
 
-The API gateway is the only entrypoint of the application. The gateway serves as a redirection hub, which guides all requests to the correct microservice based on the request path. The API gateway is created with [KongGateway](https://konghq.com/products/kong-gateway), which is a reliable and resilient framework that fits our needs.
+The API gateway is the only entrypoint of the application. The gateway serves as a redirection hub, which guides all requests to the correct microservice based on the request path. The API gateway is created with [Spring Boot](https://spring.io/projects/spring-boot) and [Spring Security](https://spring.io/projects/spring-security), which are reliable and resilient frameworks that fits our needs.
 
 Paths are matched with a then-stripped prefix path. For example, a path `/users/my` would be forwarded to the [users microservice](#ms-users) with the path `/my`. Note that the rest of the request is left as-is, meaning the body, the request parameters, as well as the method are kept.
 
@@ -346,3 +346,10 @@ Here is the list of topics used and their purpose:
   - topic: `message.creation`
   - producer: [chats MS](#ms-chats)
   - consumer: [notifications MS](#ms-notifications)
+
+
+## Architecture Diagram
+
+The following diagram summarizes the architecture of the application and its interactions.
+
+![Architecture diagram](./architecture-diagram.svg)
