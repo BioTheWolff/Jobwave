@@ -172,6 +172,10 @@ The main features are:
 - decoupling: services are only responsible for their own task and can easily be swapped out since they interact through a third party
 - overload risk reduction: services can be scaled on-demand because of their independence
 
+The following diagram summarizes the architecture of the application and its interactions.
+
+![Architecture diagram](./architecture-diagram.svg)
+
 ### Critical and support services
 
 The "critical" services can be seen as "top-level" or "backbone" services. They are the services (nearly) all other microservices rely on to properly function. On the other hand, "support" services are useful to several microservices for a certain purpose, and are decoupled from them in order to reduce software redundancy and increase data pooling.
@@ -346,10 +350,3 @@ Here is the list of topics used and their purpose:
   - topic: `message.creation`
   - producer: [chats MS](#ms-chats)
   - consumer: [notifications MS](#ms-notifications)
-
-
-## Architecture Diagram
-
-The following diagram summarizes the architecture of the application and its interactions.
-
-![Architecture diagram](./architecture-diagram.svg)
