@@ -1,0 +1,576 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="781px"
+     viewBox="-0.5 -0.5 781 1191"
+     content="&lt;mxfile host=&quot;drawio-plugin&quot; modified=&quot;2023-12-12T12:35:34.081Z&quot; agent=&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&quot; etag=&quot;McKOUGt8LShH4YgPY8em&quot; version=&quot;20.5.3&quot; type=&quot;embed&quot;&gt;&lt;diagram name=&quot;Page-1&quot; id=&quot;6c_ohbftm7qWtLkXLV9D&quot;&gt;&lt;mxGraphModel dx=&quot;1069&quot; dy=&quot;1921&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&lt;root&gt;&lt;mxCell id=&quot;0&quot;/&gt;&lt;mxCell id=&quot;1&quot; parent=&quot;0&quot;/&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-16&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-15&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;401&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-18&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-1&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-17&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;680&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-21&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-20&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;150&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-30&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-1&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-29&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-1&quot; value=&quot;&amp;lt;div&amp;gt;Saisonnier&amp;lt;/div&amp;gt;&quot; style=&quot;shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;html=1;outlineConnect=0;labelPosition=center;align=center;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;544&quot; y=&quot;470&quot; width=&quot;30&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-10&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-2&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-9&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-2&quot; value=&quot;Admin&quot; style=&quot;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;164&quot; y=&quot;990&quot; width=&quot;30&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-8&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-22&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-19&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-17&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;880&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;700&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-23&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-7&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;880&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;960&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-27&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-26&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; value=&quot;Employeur&quot; style=&quot;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;544&quot; y=&quot;850&quot; width=&quot;30&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-7&quot; value=&quot;Gestion des offres d'emploi&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;930&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-9&quot; value=&quot;Gestion des utilisateurs&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;314&quot; y=&quot;990&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-15&quot; value=&quot;Postuler à des offres d'emploi&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;371&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-17&quot; value=&quot;Communication par chat intégré&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;660&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-20&quot; value=&quot;Gestion de son compte&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;120&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-22&quot; value=&quot;Gestion de ses informations&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;850&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-28&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-26&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-1&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-26&quot; value=&quot;Gestion des avis sur les saisonniers&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;454&quot; y=&quot;660&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-31&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-29&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;84&quot; y=&quot;880&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;f8bVFRr4BjQ2tfwV-ElS-29&quot; value=&quot;Gestion des avis sur les employeurs&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;24&quot; y=&quot;660&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;2&quot; value=&quot;Création de son compte&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;-40&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;3&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;2&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;575&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;-10&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;685&quot; y=&quot;321&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;4&quot; value=&quot;Connexion à son compte&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;40&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;5&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;4&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;70&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;321&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;6&quot; value=&quot;Suppression de son compte&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;200&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;7&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;6&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;231&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;231&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;8&quot; value=&quot;Changer de catégorie de job préférée&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;281&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;9&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;8&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;500&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;311&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;231&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;10&quot; value=&quot;Visualisation des avis sur les saisonniers&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;304&quot; y=&quot;660&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;11&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;&quot; parent=&quot;1&quot; source=&quot;f8bVFRr4BjQ2tfwV-ElS-3&quot; target=&quot;10&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;mxPoint x=&quot;569&quot; y=&quot;860&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;524&quot; y=&quot;730&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;12&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;&quot; parent=&quot;1&quot; source=&quot;10&quot; target=&quot;f8bVFRr4BjQ2tfwV-ElS-1&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;mxPoint x=&quot;524&quot; y=&quot;670&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;569&quot; y=&quot;540&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;13&quot; value=&quot;Retirer sa candidature à une offre d'emploi&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;450&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;14&quot; value=&quot;Confirmer une prise de poste&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;530&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;15&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;499&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;480&quot; as=&quot;targetPoint&quot;/&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;499&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;480&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;480&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;16&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;14&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;499&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;400&quot; as=&quot;targetPoint&quot;/&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;499&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;560&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;17&quot; value=&quot;Accepter une candidature&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;1010&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;18&quot; value=&quot;Refuser une candidature&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;684&quot; y=&quot;1090&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;19&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;17&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;880&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;1040&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;880&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;960&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;20&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;18&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;880&quot;/&gt;&lt;mxPoint x=&quot;624&quot; y=&quot;1120&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;574&quot; y=&quot;880&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;684&quot; y=&quot;1040&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;21&quot; value=&quot;Visualisation des avis sur les employeurs&quot; style=&quot;rounded=0;whiteSpace=wrap;html=1;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;164&quot; y=&quot;660&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;22&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;&quot; parent=&quot;1&quot; target=&quot;21&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;mxPoint x=&quot;544&quot; y=&quot;500&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;84&quot; y=&quot;660&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;23&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;&quot; parent=&quot;1&quot; edge=&quot;1&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;224&quot; y=&quot;720&quot;/&gt;&lt;mxPoint x=&quot;224&quot; y=&quot;880&quot;/&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;224&quot; y=&quot;730&quot; as=&quot;sourcePoint&quot;/&gt;&lt;mxPoint x=&quot;544&quot; y=&quot;880&quot; as=&quot;targetPoint&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;"
+     onclick="(function(svg){var src=window.event.target||window.event.srcElement;while (src!=null&amp;&amp;src.nodeName.toLowerCase()!='a'){src=src.parentNode;}if(src==null){if(svg.wnd!=null&amp;&amp;!svg.wnd.closed){svg.wnd.focus();}else{var r=function(evt){if(evt.data=='ready'&amp;&amp;evt.source==svg.wnd){svg.wnd.postMessage(decodeURIComponent(svg.getAttribute('content')),'*');window.removeEventListener('message',r);}};window.addEventListener('message',r);svg.wnd=window.open('https://viewer.diagrams.net/?client=1&amp;page=0&amp;edit=_blank');}}})(this);"
+     style="cursor:pointer;max-width:100%;max-height:1191px;">
+    <defs/>
+    <g>
+        <path d="M 550 540 L 600 540 L 600 441 L 653.63 441" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 441 L 651.88 444.5 L 653.63 441 L 651.88 437.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 550 540 L 600 540 L 600 720 L 653.63 720" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 720 L 651.88 723.5 L 653.63 720 L 651.88 716.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 550 540 L 600 540 L 600 190 L 653.63 190" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 190 L 651.88 193.5 L 653.63 190 L 651.88 186.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 520 540 L 60 540 L 60 693.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 60 698.88 L 56.5 691.88 L 60 693.63 L 63.5 691.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <ellipse cx="535" cy="517.5" rx="7.5" ry="7.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+                 pointer-events="all"/>
+        <path d="M 535 525 L 535 550 M 535 530 L 520 530 M 535 530 L 550 530 M 535 550 L 520 570 M 535 550 L 550 570"
+              fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe flex-end; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 507px; margin-left: 535px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                <div>Saisonnier</div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="535" y="507" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Saiso...
+                </text>
+            </switch>
+        </g>
+        <path d="M 170 1060 L 283.63 1060" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 288.88 1060 L 281.88 1063.5 L 283.63 1060 L 281.88 1056.5 Z" fill="rgb(0, 0, 0)"
+              stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <ellipse cx="155" cy="1037.5" rx="7.5" ry="7.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+                 pointer-events="all"/>
+        <path d="M 155 1045 L 155 1070 M 155 1050 L 140 1050 M 155 1050 L 170 1050 M 155 1070 L 140 1090 M 155 1070 L 170 1090"
+              fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 1097px; margin-left: 155px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                Admin
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="155" y="1109" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                      text-anchor="middle">Admin
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 920 L 653.63 920" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 920 L 651.88 923.5 L 653.63 920 L 651.88 916.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 550 920 L 600 920 L 600 740 L 653.63 740" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 740 L 651.88 743.5 L 653.63 740 L 651.88 736.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 550 920 L 600 920 L 600 1000 L 653.63 1000" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 1000 L 651.88 1003.5 L 653.63 1000 L 651.88 996.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 535 890 L 535 825 L 490 825 L 490 766.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 490 761.12 L 493.5 768.12 L 490 766.37 L 486.5 768.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <ellipse cx="535" cy="897.5" rx="7.5" ry="7.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+                 pointer-events="all"/>
+        <path d="M 535 905 L 535 930 M 535 910 L 520 910 M 535 910 L 550 910 M 535 930 L 520 950 M 535 930 L 550 950"
+              fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 957px; margin-left: 535px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                Employeur
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="535" y="969" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Emplo...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="970" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 1000px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Gestion des offres d'emploi
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="1004" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                      text-anchor="middle">Gestion des offres d...
+                </text>
+            </switch>
+        </g>
+        <rect x="290" y="1030" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 1060px; margin-left: 291px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Gestion des utilisateurs
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="350" y="1064" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                      text-anchor="middle">Gestion des utilisat...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="411" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 441px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Postuler à des offres d'emploi
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="445" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Postuler à des offre...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="700" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 730px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Communication par chat intégré
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="734" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Communication par ch...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="160" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 190px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Gestion de son compte
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="194" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Gestion de son compte
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="890" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 920px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Gestion de ses informations
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="924" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Gestion de ses infor...
+                </text>
+            </switch>
+        </g>
+        <path d="M 490 700 L 490 635 L 535 635 L 535 576.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 535 571.12 L 538.5 578.12 L 535 576.37 L 531.5 578.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="430" y="700" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 730px; margin-left: 431px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Gestion des avis sur les saisonniers
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="490" y="734" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Gestion des avis sur...
+                </text>
+            </switch>
+        </g>
+        <path d="M 60 760 L 60 920 L 513.63 920" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 518.88 920 L 511.88 923.5 L 513.63 920 L 511.88 916.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="0" y="700" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 730px; margin-left: 1px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Gestion des avis sur les employeurs
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="60" y="734" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Gestion des avis sur...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="0" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 30px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Création de son compte
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="34" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Création de son comp...
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 540 L 551 540 L 600 540 L 600 30 L 653.63 30" fill="none" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 658.88 30 L 651.88 33.5 L 653.63 30 L 651.88 26.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="660" y="80" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 110px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Connexion à son compte
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="114" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Connexion à son comp...
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 540 L 600 540 L 600 110 L 653.63 110" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 110 L 651.88 113.5 L 653.63 110 L 651.88 106.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="660" y="240" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 270px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Suppression de son compte
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="274" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Suppression de son c...
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 540 L 600 540 L 600 271 L 653.63 270.11" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 270.02 L 651.94 273.63 L 653.63 270.11 L 651.82 266.64 Z" fill="rgb(0, 0, 0)"
+              stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="660" y="321" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 351px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Changer de catégorie de job préférée
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="355" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Changer de catégorie...
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 540 L 600 540 L 600 351 L 653.63 351" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 351 L 651.88 354.5 L 653.63 351 L 651.88 347.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="280" y="700" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 730px; margin-left: 281px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Visualisation des avis sur les saisonniers
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="340" y="734" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Visualisation des av...
+                </text>
+            </switch>
+        </g>
+        <path d="M 535 890 L 535 825 L 340 825 L 340 766.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 340 761.12 L 343.5 768.12 L 340 766.37 L 336.5 768.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 340 700 L 340 635 L 535 635 L 535 576.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 535 571.12 L 538.5 578.12 L 535 576.37 L 531.5 578.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="660" y="490" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 520px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Retirer sa candidature à une offre d'emploi
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="524" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Retirer sa candidatu...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="570" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 600px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Confirmer une prise de poste
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="604" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Confirmer une prise...
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 539 L 600 539 L 600 520 L 653.63 520" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 520 L 651.88 523.5 L 653.63 520 L 651.88 516.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 550 539 L 600 539 L 600 600 L 653.63 600" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 600 L 651.88 603.5 L 653.63 600 L 651.88 596.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="660" y="1050" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 1080px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Accepter une candidature
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="1084" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                      text-anchor="middle">Accepter une candida...
+                </text>
+            </switch>
+        </g>
+        <rect x="660" y="1130" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 1160px; margin-left: 661px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Refuser une candidature
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="720" y="1164" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                      text-anchor="middle">Refuser une candidat...
+                </text>
+            </switch>
+        </g>
+        <path d="M 550 920 L 600 920 L 600 1080 L 653.63 1080" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 1080 L 651.88 1083.5 L 653.63 1080 L 651.88 1076.5 Z" fill="rgb(0, 0, 0)"
+              stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 550 920 L 600 920 L 600 1160 L 653.63 1160" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 658.88 1160 L 651.88 1163.5 L 653.63 1160 L 651.88 1156.5 Z" fill="rgb(0, 0, 0)"
+              stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="140" y="700" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                               style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 730px; margin-left: 141px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                             style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Visualisation des avis sur les employeurs
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="200" y="734" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Visualisation des av...
+                </text>
+            </switch>
+        </g>
+        <path d="M 520 540 L 200 540 L 200 693.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 200 698.88 L 196.5 691.88 L 200 693.63 L 203.5 691.88 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 200 770 L 200 760 L 200 920 L 513.63 920" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 518.88 920 L 511.88 923.5 L 513.63 920 L 511.88 916.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+              stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
+           target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text>
+        </a>
+    </switch>
+</svg>
