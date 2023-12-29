@@ -9,5 +9,5 @@ networks:
 
 include:
   # backbone services
-  - docker/services/api-gateway.yml
-  - docker/services/broker.yml
+  - docker/services/backbone/gateway.yml
+  - docker/services/backbone/broker.yml

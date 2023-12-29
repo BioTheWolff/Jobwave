@@ -1,0 +1,11 @@
+
+# This file can be placed wherever needed - including external configuration
+# The path is set through the "gateway.routes.config.path" (or "GATEWAY_ROUTES_CONFIG_PATH") and should be absolute
+
+gateway:
+  routes:
+    - name: users
+      uri: "http://localhost:8000"
+    - name: auth
+      uri: "http://localhost:35000"
+      authoritative: true

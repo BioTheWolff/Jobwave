@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  gateway:
+    image: ghcr.io/biothewolff/jobwave-gateway:latest
+    networks:
+      - gateway
+    volumes:
+      - ../config/gateway/routes.yml:/opt/routes.yml:ro
+    environment:
+      GATEWAY_ROUTES_CONFIG_PATH: /opt/routes.yml
+
