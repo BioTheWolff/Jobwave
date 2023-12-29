@@ -8,6 +8,11 @@ services:
   auth:
     image: ghcr.io/biothewolff/jobwave-auth:latest
     container_name: 'jobwave-auth'
+    depends_on:
+      broker:
+        condition: service_healthy
+      auth-db:
+          condition: service_healthy
     networks:
       - gateway
       - broker
@@ -41,8 +46,9 @@ services:
           "-d", "auth",
           "-U", "auth"
         ]
-      interval: 30s
-      timeout: 30s
-      retries: 3
+      start_period: 10s
+      interval: 5s
+      timeout: 10s
+      retries: 5
     restart: on-failure
 
