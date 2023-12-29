@@ -3,10 +3,14 @@ version: '3.9'
 services:
   gateway:
     image: ghcr.io/biothewolff/jobwave-gateway:latest
+    container_name: 'jobwave-gateway'
     networks:
       - gateway
     volumes:
-      - ../config/gateway/routes.yml:/opt/routes.yml:ro
+      - ../../config/gateway/routes.yml:/opt/routes.yml:ro
+      - ../../data/public.pem:/opt/public.pem:ro
     environment:
       GATEWAY_ROUTES_CONFIG_PATH: /opt/routes.yml
+      JWT_ALGORITHM: 'RSA'
+      JWT_FILE: /opt/public.pem
 

@@ -11,3 +11,6 @@ include:
   # backbone services
   - docker/services/backbone/gateway.yml
   - docker/services/backbone/broker.yml
+
+  # functional services
+  - docker/services/auth.yml
