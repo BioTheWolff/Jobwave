@@ -7,5 +7,5 @@ gateway:
     - name: users
       uri: "http://localhost:8000"
     - name: auth
-      uri: "http://localhost:35000"
+      uri: "http://auth:8080"
       authoritative: true

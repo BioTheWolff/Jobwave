@@ -1,0 +1,48 @@
+version: '3.9'
+
+networks:
+  __internal-auth:
+    name: 'jobwave-auth-internal'
+
+services:
+  auth:
+    image: ghcr.io/biothewolff/jobwave-auth:latest
+    container_name: 'jobwave-auth'
+    networks:
+      - gateway
+      - broker
+      - __internal-auth
+    volumes:
+      - ../data/private.pem:/opt/private.pem:ro
+      - ../data/public.pem:/opt/public.pem:ro
+    environment:
+      SPRING_DATASOURCE_URL: 'jdbc:postgresql://auth-db:5432/auth'
+      SPRING_DATASOURCE_USERNAME: 'auth'
+      SPRING_DATASOURCE_PASSWORD: ${AUTH_DB_PASSWORD}
+      JWT_PRIVATE_KEY: /opt/private.pem
+      JWT_PUBLIC_KEY: /opt/public.pem
+      KAFKA_SERVERS: 'broker:9092'
+
+  auth-db:
+    image: 'postgres:16-alpine3.18'
+    container_name: 'jobwave-auth-db'
+    networks:
+      - __internal-auth
+    volumes:
+      - ../data/auth:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: auth
+      POSTGRES_USER: auth
+      POSTGRES_PASSWORD: ${AUTH_DB_PASSWORD}
+    healthcheck:
+      test:
+        [
+          "CMD", "pg_isready",
+          "-d", "auth",
+          "-U", "auth"
+        ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    restart: on-failure
+
