@@ -233,7 +233,7 @@ The microservice also interacts with the OSS (Object Storage Service), in this c
 
 The Offers microservice manages the job offers and everything that revolves around it. It is responsible for the management of the job offers themselves, the applications for said job offers, and the resolution of a job offer.
 
-The job offers and their related applications are stored in a [PostgreSQL](https://www.postgresql.org/) instance. The microservice is developed using [Kotlin](https://kotlinlang.org/).
+The job offers and their related applications are stored in a [PostgreSQL](https://www.postgresql.org/) instance. The microservice is developed using [Go](https://go.dev/) with [GinGonic](https://gin-gonic.com/).
 
 A job offer can be resolved into one of these two states:
 - Cancelled: the job offer was cancelled by the employer,
@@ -251,7 +251,7 @@ In order for seasonal workers to determine if they want to work for an employer,
 This microservice is in charge of managing reviews and comments that can be left by both parties.
 It also manages the authorizations associated with the reviews, so the appropriate level of information is sent back depending on the client who requests it (i.e. employers depending on their subscription tier).
 
-The R&Rs are stored in a [PostgreSQL](https://www.postgresql.org/) instance. The microservice also uses [Deno](https://deno.com/), which is an easy, fast and cloud-ready programming language.
+The R&Rs are stored in a [PostgreSQL](https://www.postgresql.org/) instance. This microservice also uses [Sprint Boot](https://spring.io/projects/spring-boot/), and is developed in [Kotlin](https://kotlinlang.org/).
 
 Please see the [appropriate section](#job-offers-and-applications) for reviews conditions and requirements.
 
@@ -260,7 +260,7 @@ Please see the [appropriate section](#job-offers-and-applications) for reviews c
 The Chats' microservice is responsible for the storage of all conversations and messages exchanged between employers and seasonal workers. It directly receives the messages sent, as there is no "middleman" service/microservice.
 This is designed so that the microservice is the sole manager of conversations, and the microservice being shut down halts the functionality entirely.
 
-The microservice stores messages in a [PostgreSQL](https://www.postgresql.org/) instance, which is the database of choice when data length is known, and the amount of data will grow steadily. This microservice also uses [Deno](https://deno.com/), for the same purposes as the [R&R microservice](#ms-reviews).
+The microservice stores messages in a [PostgreSQL](https://www.postgresql.org/) instance, which is the database of choice when data length is known, and the amount of data will grow steadily. 
 
 #### MS: Recommendations
 
@@ -272,7 +272,7 @@ Using the broker as primary means of information gathering, the microservice col
 - reviews (creation, deletion),
 - users (preferred job category update).
 
-The microservice is made using [Deno](https://deno.com/), connected to a [PostgreSQL](https://www.postgresql.org/) database.
+The microservice is made using [Bun](https://bun.sh/), connected to a [PostgreSQL](https://www.postgresql.org/) database.
 
 The recommendations should be based on:
 - recency of the job offer,
@@ -332,20 +332,35 @@ Here is the list of topics used and their purpose:
   - producer: [authentication MS](#ms-authentication),
   - consumer: [users MS](#ms-users),
 - Feed the recommendation system upon updates,
-  - offer updates and resolutions:
-    - topics: `offer.resolution`,
-    - producer: [offers MS](#ms-offers),
-    - consumer: [recommendation MS](#ms-recommendations),
   - seasonal workers' preferred job category:
     - topic: `worker.preference.category`,
     - producer: [users MS](#ms-users),
     - consumer: [recommendation MS](#ms-recommendations),
-- Inform of the creation of a new job offer,
+- Inform of the creation or update of a new job offer,
   - topic: `offer.creation`,
   - producer: [offers MS](#ms-offers),
   - consumers:
+    - [ratings & reviews MS](#ms-reviews): to feed the ratings and reviews system, 
     - [recommendation MS](#ms-recommendations): to feed the recommendation system,
     - [notifications MS](#ms-notifications): see the [list of notifications usecases](#ms-notifications),
+  - offer resolutions:
+    - topics: `offer.resolution`,
+    - producer: [offers MS](#ms-offers),
+    - consumer: 
+      - [recommendation MS](#ms-recommendations): to feed the recommendation system,
+      - [ratings & reviews MS](#ms-reviews): to feed the ratings and reviews system,
+  - offer updates:
+    - topics: `offer.update`,
+    - producer: [offers MS](#ms-offers),
+    - consumer: 
+      - [recommendation MS](#ms-recommendations): to feed the recommendation system,
+      - [ratings & reviews MS](#ms-reviews): to feed the ratings and reviews system,
+  - offer deletion:
+    - topics: `offer.deletion`,
+    - producer: [offers MS](#ms-offers),
+    - consumer: 
+      - [recommendation MS](#ms-recommendations): to feed the recommendation system,
+      - [ratings & reviews MS](#ms-reviews): to feed the ratings and reviews system,
 - Inform of a new chat message,
   - topic: `message.creation`,
   - producer: [chats MS](#ms-chats),
