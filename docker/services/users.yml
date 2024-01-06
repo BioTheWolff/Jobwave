@@ -73,10 +73,10 @@ services:
     volumes:
       - ../data/users/mongo:/bitnami/mongodb:rw
     environment:
-      MONGODB_ROOT_PASSWORD: ${USERS_MONGO_ROOT_PASSWORD}
       MONGODB_DATABASE: 'workers'
       MONGODB_USERNAME: 'users'
       MONGODB_PASSWORD: ${USERS_MONGO_PASSWORD}
+      MONGODB_ROOT_PASSWORD: ${USERS_MONGO_ROOT_PASSWORD}
     healthcheck:
       test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
       interval: 5s

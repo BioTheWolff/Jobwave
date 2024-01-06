@@ -4,10 +4,15 @@ services:
   gateway:
     image: ghcr.io/biothewolff/jobwave-gateway:latest
     container_name: 'jobwave-gateway'
+    restart: on-failure
     networks:
       - gateway
+    ports:
+      - "8080:8080"
     volumes:
+      # The routes' file path.
       - ../../config/gateway/routes.yml:/opt/routes.yml:ro
+      # The public key, to verify JWTs against.
       - ../../data/public.pem:/opt/public.pem:ro
     environment:
       GATEWAY_ROUTES_CONFIG_PATH: /opt/routes.yml

@@ -8,6 +8,7 @@ services:
   auth:
     image: ghcr.io/biothewolff/jobwave-auth:latest
     container_name: 'jobwave-auth'
+    restart: on-failure
     depends_on:
       broker:
         condition: service_healthy
@@ -21,16 +22,20 @@ services:
       - ../data/private.pem:/opt/private.pem:ro
       - ../data/public.pem:/opt/public.pem:ro
     environment:
+      # Database config
       SPRING_DATASOURCE_URL: 'jdbc:postgresql://auth-db:5432/auth'
       SPRING_DATASOURCE_USERNAME: 'auth'
       SPRING_DATASOURCE_PASSWORD: ${AUTH_DB_PASSWORD}
+      # JWT config
       JWT_PRIVATE_KEY: /opt/private.pem
       JWT_PUBLIC_KEY: /opt/public.pem
+      # Broker config
       KAFKA_SERVERS: 'broker:9092'
 
   auth-db:
     image: 'postgres:16-alpine3.18'
     container_name: 'jobwave-auth-db'
+    restart: on-failure
     networks:
       - __internal-auth
     volumes:
@@ -50,5 +55,4 @@ services:
       interval: 5s
       timeout: 10s
       retries: 5
-    restart: on-failure
 
