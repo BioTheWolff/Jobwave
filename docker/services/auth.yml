@@ -27,8 +27,8 @@ services:
       SPRING_DATASOURCE_USERNAME: 'auth'
       SPRING_DATASOURCE_PASSWORD: ${AUTH_DB_PASSWORD}
       # JWT config
-      JWT_PRIVATE_KEY: /opt/private.pem
-      JWT_PUBLIC_KEY: /opt/public.pem
+      JWT_PRIVATE_KEY: "file:///opt/private.pem"
+      JWT_PUBLIC_KEY: "file:///opt/public.pem"
       # Broker config
       KAFKA_SERVERS: 'broker:9092'
 

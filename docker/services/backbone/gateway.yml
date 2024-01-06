@@ -15,7 +15,7 @@ services:
       # The public key, to verify JWTs against.
       - ../../data/public.pem:/opt/public.pem:ro
     environment:
-      GATEWAY_ROUTES_CONFIG_PATH: /opt/routes.yml
+      GATEWAY_ROUTES_CONFIG_PATH: "/opt/routes.yml"
       JWT_ALGORITHM: 'RSA'
-      JWT_FILE: /opt/public.pem
+      JWT_FILE: "file:///opt/public.pem"
 
