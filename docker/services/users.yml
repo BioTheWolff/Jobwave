@@ -1,0 +1,85 @@
+version: '3.9'
+
+networks:
+  __internal-users:
+    name: 'jobwave-users-internal'
+
+services:
+  users:
+    image: ghcr.io/biothewolff/jobwave-users:latest
+    container_name: 'jobwave-users'
+    restart: on-failure
+    depends_on:
+      # Wait for the broker
+      broker:
+        condition: service_healthy
+      # Wait for own databases
+      users-psql:
+        condition: service_healthy
+      users-mongo:
+        condition: service_healthy
+    networks:
+      - gateway
+      - broker
+      - __internal-users
+    volumes:
+      - ../data/public.pem:/opt/public.pem:ro
+    environment:
+      # General config
+      MODE: 'prod'
+      SYNC_DB: false
+      BROKERS_LIST: 'broker:9092'
+      # Employers' DB
+      EMPLOYERS_DB_HOST: 'users-psql'
+      EMPLOYERS_DB_PORT: 5432
+      EMPLOYERS_DB_USERNAME: 'users'
+      EMPLOYERS_DB_PASSWORD: ${USERS_PSQL_PASSWORD}
+      EMPLOYERS_DB_DATABASE: 'employers'
+      # Workers' DB
+      WORKERS_DB_URL: 'mongodb://users:${USERS_MONGO_PASSWORD}@users-mongo:27017/workers'
+      # JWT for Zero Trust
+      JWT_PUBLIC_KEY_PATH: /opt/public.pem
+
+  users-psql:
+    image: 'postgres:16-alpine3.18'
+    container_name: 'jobwave-users-psql'
+    restart: on-failure
+    networks:
+      - __internal-users
+    volumes:
+      - ../data/users/psql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: 'employers'
+      POSTGRES_USER: 'users'
+      POSTGRES_PASSWORD: ${USERS_PSQL_PASSWORD}
+    healthcheck:
+      test:
+        [
+          "CMD", "pg_isready",
+          "-d", "employers",
+          "-U", "users"
+        ]
+      start_period: 10s
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+  users-mongo:
+    image: 'bitnami/mongodb:7.0-debian-11'
+    container_name: 'jobwave-users-mongo'
+    restart: on-failure
+    networks:
+      - __internal-users
+    volumes:
+      - ../data/users/mongo:/bitnami/mongodb:rw
+    environment:
+      MONGODB_ROOT_PASSWORD: ${USERS_MONGO_ROOT_PASSWORD}
+      MONGODB_DATABASE: 'workers'
+      MONGODB_USERNAME: 'users'
+      MONGODB_PASSWORD: ${USERS_MONGO_PASSWORD}
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      start_period: 10s

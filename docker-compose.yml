@@ -14,3 +14,4 @@ include:
 
   # functional services
   - docker/services/auth.yml
+  - docker/services/users.yml

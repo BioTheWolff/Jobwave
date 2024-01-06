@@ -5,7 +5,7 @@
 gateway:
   routes:
     - name: users
-      uri: "http://localhost:8000"
+      uri: "http://users:3000"
     - name: auth
       uri: "http://auth:8080"
       authoritative: true
